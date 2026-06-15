@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroVerse // Meme & Blog Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">RETROVERSE</div>
+        <nav>
+            <button id="nav-feed" class="nav-btn active">Meme Feed</button>
+            <button id="nav-post" class="nav-btn">Create Post</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="feed-page" class="page-view">
+            <h2 class="section-title">The Feed</h2>
+            <div id="meme-container" class="meme-grid">
+                </div>
+        </section>
+
+        <section id="post-page" class="page-view hidden">
+            <h2 class="section-title">Create New Post</h2>
+            
+            <form id="meme-form" class="retro-form">
+                <div class="form-group">
+                    <label for="post-title">Post Title</label>
+                    <input type="text" id="post-title" placeholder="Enter an awesome title..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="author-name">Author Name</label>
+                    <input type="text" id="author-name" placeholder="Your handle..." required>
+                </div>
+
+                <div class="form-row">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="reveal-identity" checked>
+                        <span class="checkmark"></span>
+                        Reveal My Identity (Uncheck for Anonymous)
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="image-upload">Upload Images (Up to 5 PNGs)</label>
+                    <input type="file" id="image-upload" accept=".png" multiple required>
+                    <small class="file-hint">Select up to 5 PNG images. Hold Ctrl/Cmd to select multiple.</small>
+                    <div id="image-preview" class="preview-grid"></div>
+                </div>
+
+                <div class="form-row border-top">
+                    <label class="checkbox-container exclusive-label">
+                        <input type="checkbox" id="is-exclusive">
+                        <span class="checkmark"></span>
+                        Mark as Exclusive Style Blog
+                    </label>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Publish Post</button>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
